@@ -1,0 +1,95 @@
+.vans-page {
+    flex: 1;
+}
+
+.vans-filters {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    height: 4rem;
+}
+
+.van-clear-filters {
+    margin-left: auto;
+    margin-top: .5rem;
+    padding: 0.35rem 0 .35rem;
+    text-decoration: underline;
+}
+
+.vans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;q
+}
+
+.van-card {
+
+}
+
+.van-image {
+    height: auto;
+    min-height: 14.5rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.van-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.van-title a {
+    color: #161616;
+    text-decoration: none;
+}
+
+.van-price-container {
+    float: right;
+}
+
+.van-price-amount {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: block;
+}
+
+.van-price-per-day {
+    margin-top: -.25rem;
+    display: block;
+
+    text-align: right;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.van-tag {
+    margin-top: .5rem;
+    padding: 0.35rem .8rem;
+
+    display: inline-block;
+
+    color: #FFEAD0;
+    background: #E17654;
+    border-radius: .31rem;
+}
+
+.van-tag-filter {
+    color: #4D4D4D;
+    background: #FFEAD0;
+}
+
+.van-tag--simple {
+    background: #E17654;
+}
+
+.van-tag--rugged {
+    background: #115E59;
+}
+
+.van-tag--luxury {
+    background: #161616;
+}
