@@ -1,3 +1,7 @@
+.about-page {
+    flex: 1;
+}
+
 .about-page-header-image {
     height: 14.5rem;
     width: 100%;

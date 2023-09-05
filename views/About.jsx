@@ -5,8 +5,14 @@ import '../styles/About.css'
 import StarryNightImg from '../images/starry-night.png'
 
 export default function AboutView() {
+
+  React.useEffect(() => {
+    document.title = "About | #VANLIFE"
+  }, [])
+
   return (
     <main className="about-page">
+      <div class="row">
         <img className="about-page-header-image" src={StarryNightImg} alt="Relaxing on the roof of a travel van beneath a starry sky." />
         <section className="about-intro-section">
             <h1 className="about-intro-title">Don’t squeeze in a sedan when you could relax in a van.</h1>
@@ -28,6 +34,7 @@ export default function AboutView() {
             </h2>
             <Link to="/vans" className="about-cta-button">Explore our vans</Link>
         </section>
+      </div>
     </main>
   )
 }

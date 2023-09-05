@@ -21,11 +21,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
     gap: 1.5rem;
-    padding: 1.5rem;q
-}
-
-.van-card {
-
+    padding: 1.5rem;
 }
 
 .van-image {

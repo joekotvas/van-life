@@ -1,5 +1,14 @@
+.home-page {
+    flex: 1;
+}
+
 .hero-section {
+    min-height: 100%;
     padding: 4rem 1.68rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     color: #ffffff;
     background-color: #4D4D4D;
@@ -8,7 +17,6 @@
 }
 
 .hero-title {
-    margin: 0 0 1.5rem;
     font-size: 2.25rem;
     font-weight: 700;
 }
@@ -18,7 +26,7 @@
 }
 
 .hero-cta {
-    margin: 3.5rem 0 0;
+    margin: 3.5rem auto 0;
     padding: 1rem;
 
     display: block;

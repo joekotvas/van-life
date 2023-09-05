@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import "./server"
 
 import HomeView from './views/Home'
 import AboutView from './views/About'

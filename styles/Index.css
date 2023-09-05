@@ -12,3 +12,16 @@ body {
     color: #161616;
     background: #FFF7ED;
 }
+
+#root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.row {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
