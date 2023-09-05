@@ -1,0 +1,12 @@
+.site-footer {
+    padding: 0.875rem 1.68rem;
+    text-align: center;
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.43269rem; /* 163.733% */
+
+    color: #AAA;
+    background: #252525;
+}

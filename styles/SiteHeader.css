@@ -1,0 +1,27 @@
+.site-nav {
+    padding: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    line-height: 1;
+}
+
+.site-nav-link {
+    margin: 0;
+    padding: 0;
+
+    font-weight: 600;
+
+    color: #4D4D4D;
+}
+
+.site-nav-link.logo {
+    flex: 1;
+
+    color: black;
+    font-size: 1.58456rem;
+    font-weight: 900;
+}

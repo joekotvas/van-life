@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:400,700&display=swap');
+
+*, *::before, *::after {
+        box-sizing: border-box;
+}
+
+body {
+    font-family: Inter;
+
+    line-height: 1.375;
+
+    color: #161616;
+    background: #FFF7ED;
+}

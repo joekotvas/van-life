@@ -1,0 +1,22 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+import '../styles/Home.css'
+
+export default function HomeView() {
+  return (
+    <main className="home-page">
+      <section className="hero-section">
+        <h1 className="hero-title">
+          You got the travel plans, we got the travel vans.
+        </h1>
+        <div className="hero-content">
+          <p>
+            Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.
+          </p>
+        </div>
+        <Link to="/vans" className="hero-cta">Find your van</Link>
+      </section>
+    </main>
+  )
+}
