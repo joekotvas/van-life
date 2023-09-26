@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import "./server"
+import './server'
 
 import HomeView from './views/Home'
 import AboutView from './views/About'
@@ -15,18 +15,17 @@ import SiteFooter from './components/SiteFooter/SiteFooter'
 function App() {
   return (
     <BrowserRouter>
-      <SiteHeader />
       <Routes>
-        <Route path="/" element={<HomeView />} />
-        <Route path="/about" element={<AboutView />} />
-        <Route path="/vans" element={<VansView />} />
-        <Route path="/vans/:id" element={<VansView />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomeView />} />
+          <Route path="/about" element={<AboutView />} />
+          <Route path="/vans" element={<VansView />} />
+          <Route path="/vans/:id" element={<VansView />} />
+        </Route>
       </Routes>
       <SiteFooter />
     </BrowserRouter>
   )
 }
 
-ReactDOM
-  .createRoot(document.getElementById('root'))
-  .render(<App />);
+ReactDOM.createRoot(document.getElementById('root')).render(<App />)
