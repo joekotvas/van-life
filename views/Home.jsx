@@ -10,7 +10,7 @@ export default function HomeView() {
   }, [])
 
   return (
-    <main className="home-page">
+    <main className="page home-page">
       <section className="hero-section">
         <div className="row">
           <h1 className="hero-title">
@@ -21,7 +21,7 @@ export default function HomeView() {
               Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.
             </p>
           </div>
-          <Link to="/vans" className="hero-cta">Find your van</Link>
+          <Link to="/vans" className="hero-cta button">Find your van</Link>
         </div>
       </section>
     </main>

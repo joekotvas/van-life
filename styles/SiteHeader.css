@@ -25,3 +25,7 @@
     font-size: 1.58456rem;
     font-weight: 900;
 }
+
+.site-nav-link:hover {
+    text-decoration-line: underline;
+}

@@ -20,8 +20,27 @@ body {
     height: 100vh;
 }
 
+.page {
+    padding: 1rem 0 3rem;
+}
+
 .row {
     max-width: 50rem;
     margin: 0 auto;
     padding: 0 1.5rem;
+}
+
+.button {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.75rem 1.5rem;
+
+    color: #ffffff;
+    background: #FF8C38;
+    border: 0;
+    border-radius: .31rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
 }

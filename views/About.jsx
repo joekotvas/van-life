@@ -12,8 +12,8 @@ export default function AboutView() {
 
   return (
     <main className="about-page">
+      <img className="about-page-header-image" src={StarryNightImg} alt="Relaxing on the roof of a travel van beneath a starry sky." />
       <div class="row">
-        <img className="about-page-header-image" src={StarryNightImg} alt="Relaxing on the roof of a travel van beneath a starry sky." />
         <section className="about-intro-section">
             <h1 className="about-intro-title">Don’t squeeze in a sedan when you could relax in a van.</h1>
             <div className="about-intro-content">
