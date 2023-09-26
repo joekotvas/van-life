@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import './server'
 
+import Layout from './components/Layout'
+
 import HomeView from './views/Home'
 import AboutView from './views/About'
 import VansView from './views/Vans'
@@ -23,7 +25,6 @@ function App() {
           <Route path="/vans/:id" element={<VansView />} />
         </Route>
       </Routes>
-      <SiteFooter />
     </BrowserRouter>
   )
 }
