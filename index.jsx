@@ -7,8 +7,8 @@ import Layout from './components/Layout'
 
 import HomeView from './views/Home'
 import AboutView from './views/About'
-import VansView from './views/Vans'
-import VanDetailView from './views/VanDetail'
+import VansView from './views/Vans/Vans'
+import VanDetailView from './views/Vans/VanDetail'
 
 import './styles/Index.css'
 import SiteHeader from './components/SiteHeader/SiteHeader'
