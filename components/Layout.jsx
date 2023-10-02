@@ -6,10 +6,10 @@ import Footer from './SiteFooter/SiteFooter'
 
 export default function Layout() {
   return (
-    <>
+    <div>
       <Header />
       <Outlet />
       <Footer />
-    </>
+    </div>
   )
 }

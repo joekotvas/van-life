@@ -1,22 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import '../../styles/SiteHeader.css'
 
 export default function SiteHeader() {
   return (
     <nav className="site-nav">
-      <Link to="/" className="site-nav-link logo">
-        #VANLIFE
-      </Link>
-      <Link to="/host" className="site-nav-link">
+      <div className="logo-wrapper">
+        <Link to="/" className="site-nav-link logo">
+          #VANLIFE
+        </Link>
+      </div>
+      <NavLink to="/host" className="site-nav-link">
         Host
-      </Link>
-      <Link to="/about" className="site-nav-link">
+      </NavLink>
+      <NavLink to="/about" className="site-nav-link">
         About
-      </Link>
-      <Link to="/vans" className="site-nav-link">
+      </NavLink>
+      <NavLink to="/vans" className="site-nav-link">
         Vans
-      </Link>
+      </NavLink>
     </nav>
   )
 }

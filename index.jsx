@@ -5,10 +5,18 @@ import './server'
 
 import Layout from './components/Layout'
 
-import HomeView from './views/Home'
-import AboutView from './views/About'
-import VansView from './views/Vans/Vans'
-import VanDetailView from './views/Vans/VanDetail'
+import Home from './views/Home'
+import About from './views/About'
+
+import Vans from './views/Vans/Vans'
+import VanDetail from './views/Vans/VanDetail'
+
+import Host from './views/Host/Host'
+import HostDashboard from './views/Host/Dashboard'
+import HostIncome from './views/Host/Income'
+import HostVans from './views/Host/HostVans'
+import HostVanDetail from './views/Host/HostVanDetail'
+import HostReviews from './views/Host/Reviews'
 
 import './styles/Index.css'
 import SiteHeader from './components/SiteHeader/SiteHeader'
@@ -19,10 +27,22 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<HomeView />} />
-          <Route path="/about" element={<AboutView />} />
-          <Route path="/vans" element={<VansView />} />
-          <Route path="/vans/:id" element={<VansView />} />
+          <Route path="/" element={<Home />} />
+
+          <Route path="about" element={<About />} />
+
+          <Route path="vans" element={<Vans />} />
+          <Route path="vans/:id" element={<Vans />} />
+
+          <Route path="host" element={<Host />}>
+            <Route index element={<HostDashboard />} />
+            <Route path="income" element={<HostIncome />} />
+            <Route path="vans" element={<HostVans />} />
+            <Route path="vans/:id" element={<HostVanDetail />} />
+            <Route path="reviews" element={<HostReviews />} />
+          </Route>
+
+          <Route path="*" element={<h1>Not Found</h1>} />
         </Route>
       </Routes>
     </BrowserRouter>

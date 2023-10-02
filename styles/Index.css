@@ -1,46 +1,54 @@
 @import url('https://fonts.googleapis.com/css?family=Inter:400,700&display=swap');
 
-*, *::before, *::after {
-        box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Inter;
+  font-family: Inter;
 
-    line-height: 1.375;
+  line-height: 1.375;
 
-    color: #161616;
-    background: #FFF7ED;
+  color: #161616;
+  background: #fff7ed;
 }
 
 #root {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .page {
-    padding: 1rem 0 3rem;
+  padding: 1rem 0 3rem;
 }
 
 .row {
-    max-width: 50rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .button {
-    display: inline-block;
-    margin: 1rem 0;
-    padding: 0.75rem 1.5rem;
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
 
-    color: #ffffff;
-    background: #FF8C38;
-    border: 0;
-    border-radius: .31rem;
-    font-size: 1.125rem;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
+  color: #ffffff;
+  background: #ff8c38;
+  border: 0;
+  border-radius: 0.31rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+a.active,
+a:focus {
+  text-decoration: underline;
+  font-weight: bold;
 }

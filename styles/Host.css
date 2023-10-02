@@ -1,0 +1,13 @@
+.host-navigation {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+
+  & a {
+    color: #4d4d4d;
+  }
+}
