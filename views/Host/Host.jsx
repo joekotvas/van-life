@@ -1,7 +1,7 @@
-import React from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
+import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
 
-import '../../styles/Host.css'
+import "../../styles/Host.css";
 
 export default function Host() {
   return (
@@ -16,5 +16,5 @@ export default function Host() {
       </nav>
       <Outlet />
     </>
-  )
+  );
 }

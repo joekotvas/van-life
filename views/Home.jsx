@@ -1,14 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 
-import '../styles/Home.css'
+import "../styles/Home.css";
 
 export default function HomeView() {
-
-  React.useEffect(() => {
-    document.title = "#VANLIFE"
-  }, [])
-
+  useTitle("#VANLIFE");
   return (
     <main className="page home-page">
       <section className="hero-section">
@@ -18,12 +15,15 @@ export default function HomeView() {
           </h1>
           <div className="hero-content">
             <p>
-              Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.
+              Add adventure to your life by joining the #vanlife movement. Rent
+              the perfect van to make your perfect road trip.
             </p>
           </div>
-          <Link to="/vans" className="hero-cta button">Find your van</Link>
+          <Link to="/vans" className="hero-cta button">
+            Find your van
+          </Link>
         </div>
       </section>
     </main>
-  )
+  );
 }

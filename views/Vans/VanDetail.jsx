@@ -1,15 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
-import '../../styles/VanDetail.css'
+import "../../styles/VanDetail.css";
 
 export default function VanDetailView({ vans, vanId }) {
-  const van = vans[vanId]
+  const location = useLocation();
+
+  const van = vans[vanId];
+
+  useTitle(`${van.name} | #VANLIFE`);
+
   return (
-    <main className={`page van-detail-page ${!van ? 'not-found' : ''}`}>
+    <main className={`page van-detail-page ${!van ? "not-found" : ""}`}>
       <section className="van-detail-section">
         <div className="row">
-          <Link to="/vans" className="van-detail-back-link">
+          <Link
+            to={location.state ? `..?${location.state.search}` : ".."}
+            relative="path"
+            className="van-detail-back-link"
+          >
             Back to all Vans
           </Link>
 
@@ -41,5 +51,5 @@ export default function VanDetailView({ vans, vanId }) {
         </div>
       </section>
     </main>
-  )
+  );
 }

@@ -73,21 +73,34 @@
     border-radius: .31rem;
 }
 
-.van-tag-filter {
+.vans-filters .van-tag-filter {
     color: #4D4D4D;
     background: #FFEAD0;
+    text-decoration: none;
+    font-weight: normal;
+    border: none;
+    cursor: pointer;
 }
 
-.van-tag--simple {
+.van-tag--simple, .van-tag--simple:hover, .van-tag--simple.selected {
     background: #E17654;
 }
 
-.van-tag--rugged {
+.van-tag--rugged, .van-tag--rugged:hover, .van-tag--rugged.selected {
     background: #115E59;
 }
 
-.van-tag--luxury {
+.van-tag--luxury, .van-tag--luxury:hover, .van-tag--luxury.selected {
     background: #161616;
+}
+
+.vans-filters :hover, .vans-filters .selected {
+    color: #FFEAD0;
+}
+
+.van-clear-filters a, .van-clear-filters a:hover {
+    color: #4D4D4D;
+    text-decoration: underline;
 }
 
 .van-detail-page {
