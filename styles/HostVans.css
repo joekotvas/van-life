@@ -1,0 +1,44 @@
+.host-vans-section {
+  .host-vans-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .host-vans-list-card {
+    list-style: none;
+    background: white;
+    padding: 1.15rem;
+    margin: 0;
+    display: flex;
+  }
+  .host-vans-list-card--image {
+    width: 4.15rem;
+    display: block;
+    aspect-ratio: 1/1;
+  }
+
+  .host-vans-list-card--info {
+    margin-left: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .host-vans-list-card--title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    a {
+      color: #161616;
+      text-decoration: none;
+    }
+  }
+
+  .host-vans-list-card--price {
+    margin: 0;
+  }
+}

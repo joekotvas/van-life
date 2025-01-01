@@ -5,7 +5,7 @@ import "../../styles/Host.css";
 
 export default function Host() {
   return (
-    <>
+    <main className="host-page">
       <nav className="host-navigation">
         <NavLink to="/host" end>
           Dashboard
@@ -15,6 +15,6 @@ export default function Host() {
         <NavLink to="reviews">Reviews</NavLink>
       </nav>
       <Outlet />
-    </>
+    </main>
   );
 }
