@@ -1,39 +1,41 @@
 .about-page {
-    flex: 1;
+  flex: 1;
 }
 
 .about-page-header-image {
-    height: 14.5rem;
-    width: 100%;
-    object-fit: cover;
+  height: 14.5rem;
+  width: 100%;
+  object-fit: cover;
 }
 
 .about-intro-section {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 .about-cta-section {
-    margin: 1.5rem;
-    padding: 1.5rem 2.5rem;
+  margin: 1.5rem;
+  padding: 1.5rem 2.5rem;
 
-    line-height: 1.25;
+  line-height: 1.25;
 
-    border-radius: 0.3125rem;
-    background: #FFCC8D;
+  border-radius: 0.3125rem;
+  background: #ffcc8d;
+
+  width: auto;
 }
 
 .about-cta-button {
-    margin: .5rem;
-    padding: 1rem;
+  margin: 0.5rem;
+  padding: 1rem;
 
-    display: inline-block;
+  display: inline-block;
 
-    text-align: center;
-    font-weight: 700;
-    text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
 
-    color: #ffffff;
-    background: #161616;
+  color: #ffffff;
+  background: #161616;
 
-    border-radius: 0.625rem;
+  border-radius: 0.625rem;
 }

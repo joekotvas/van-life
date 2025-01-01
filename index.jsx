@@ -18,6 +18,8 @@ import HostVans from "./views/Host/HostVans";
 import HostVanDetail from "./views/Host/HostVanDetail";
 import HostReviews from "./views/Host/Reviews";
 
+import NotFound from "./views/NotFound";
+
 import "./styles/Index.css";
 
 function App() {
@@ -44,7 +46,7 @@ function App() {
             <Route path="vans/:id/photos" element={<HostVanDetail />} />
           </Route>
 
-          <Route path="*" element={<h1>Not Found</h1>} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
