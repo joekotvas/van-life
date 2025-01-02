@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 import "../styles/Login.css";
 
@@ -7,6 +8,9 @@ export default function Login() {
     email: "",
     password: "",
   });
+
+  const location = useLocation();
+  const { message } = location.state || { message: "" };
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -22,8 +26,9 @@ export default function Login() {
   }
 
   return (
-    <main className="page login-page">
+    <main className="login-page">
       <div className="row">
+        {message && <p className="message">{message}</p>}
         <h1>Sign in to your account</h1>
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="inputs-container">

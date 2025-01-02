@@ -64,3 +64,12 @@ a:focus {
   text-decoration: underline;
   font-weight: bold;
 }
+
+.message {
+  margin: 0 0 2rem;
+  padding: 0.875rem;
+
+  color: #161616;
+  background: #ffe4c3;
+  border-radius: 0.31rem;
+}

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./server";
 
 import Layout from "./components/Layout";
+import AuthRequired from "./components/AuthRequired";
 
 import Home from "./views/Home";
 import About from "./views/About";
@@ -39,14 +40,16 @@ function App() {
             <Route path=":id" element={<Vans />} />
           </Route>
 
-          <Route path="host" element={<HostLayout />}>
-            <Route index element={<HostDashboard />} />
-            <Route path="income" element={<HostIncome />} />
-            <Route path="reviews" element={<HostReviews />} />
-            <Route path="vans" element={<HostVans />} />
-            <Route path="vans/:id" element={<HostVanDetail />} />
-            <Route path="vans/:id/pricing" element={<HostVanDetail />} />
-            <Route path="vans/:id/photos" element={<HostVanDetail />} />
+          <Route element={<AuthRequired />}>
+            <Route path="host" element={<HostLayout />}>
+              <Route index element={<HostDashboard />} />
+              <Route path="income" element={<HostIncome />} />
+              <Route path="reviews" element={<HostReviews />} />
+              <Route path="vans" element={<HostVans />} />
+              <Route path="vans/:id" element={<HostVanDetail />} />
+              <Route path="vans/:id/pricing" element={<HostVanDetail />} />
+              <Route path="vans/:id/photos" element={<HostVanDetail />} />
+            </Route>
           </Route>
 
           <Route path="*" element={<NotFound />} />
