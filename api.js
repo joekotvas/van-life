@@ -23,3 +23,23 @@ export async function getHostVans() {
   const data = await res.json();
   return data.vans.filter(({ hostId }) => hostId === "123");
 }
+
+export async function loginUser(creds) {
+  const res = await fetch("/api/login", {
+    method: "POST",
+    body: JSON.stringify(creds),
+  });
+  const data = await res.json();
+
+  console.log(data);
+
+  if (!res.ok) {
+    throw {
+      message: data.message,
+      statusText: res.statusText,
+      status: res.status,
+    };
+  }
+
+  return data;
+}

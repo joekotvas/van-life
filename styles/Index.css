@@ -77,3 +77,8 @@ a:focus {
 .loading-page {
   text-align: center;
 }
+
+.login-error {
+  text-align: center;
+  color: #f00000;
+}

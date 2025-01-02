@@ -1,8 +1,9 @@
-import { createServer, Model } from "miragejs";
+import { createServer, Model, Response } from "miragejs";
 
 createServer({
   models: {
     vans: Model,
+    users: Model,
   },
 
   seeds(server) {
@@ -72,6 +73,13 @@ createServer({
       type: "rugged",
       hostId: "123",
     });
+
+    server.create("user", {
+      id: "123",
+      email: "b@b.com",
+      password: "p123",
+      name: "Bob",
+    });
   },
 
   routes() {
@@ -97,6 +105,26 @@ createServer({
       // Hard-code the hostId for now
       const id = request.params.id;
       return schema.vans.where({ id, hostId: "123" });
+    });
+
+    this.post("/login", (schema, request) => {
+      const { email, password } = JSON.parse(request.requestBody);
+
+      const foundUser = schema.users.findBy({ email, password });
+
+      if (!foundUser) {
+        return new Response(
+          401,
+          {},
+          { message: "Email or password is not recognized." }
+        );
+      }
+
+      foundUser.password = undefined;
+      return {
+        user: foundUser,
+        token: "abc123",
+      };
     });
   },
 });
