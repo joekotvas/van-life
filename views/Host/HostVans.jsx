@@ -1,30 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useVans from "../../hooks/useVans.jsx";
 
 import { getHostVans } from "../../api.js";
 
 import "../../styles/HostVans.css";
 
 export default function HostVans() {
-  const [vans, setVans] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState(null);
-
-  React.useEffect(() => {
-    async function loadHostVans() {
-      try {
-        setLoading(true);
-        const data = await getHostVans();
-        setVans(data);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    loadHostVans();
-  }, []);
+  const { loading, error, vans } = useVans({
+    hostId: 123,
+  });
 
   if (loading) {
     return (

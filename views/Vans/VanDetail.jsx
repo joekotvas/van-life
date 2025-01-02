@@ -1,41 +1,19 @@
-import React from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import useTitle from "../../hooks/useTitle";
-import { getVans } from "../../api.js";
+import useVans from "../../hooks/useVans";
 
 import "../../styles/VanDetail.css";
 
 export default function VanDetailView() {
-  const [vans, setVans] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState(null);
-
   const location = useLocation();
 
   const { id } = useParams();
 
-  console.log(vans, id - 1);
+  const { vans, loading, error } = useVans({
+    vanData: location.state?.vans,
+  });
+
   const van = vans?.filter((van) => van.id === id)[0];
-
-  React.useEffect(() => {
-    async function loadVans() {
-      setLoading(true);
-      try {
-        const data = await getVans();
-        setVans(data);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    if (location.state?.vans) {
-      setVans(location.state.vans);
-    } else {
-      loadVans();
-    }
-  }, []);
 
   const type = location.state?.type || "all";
 
