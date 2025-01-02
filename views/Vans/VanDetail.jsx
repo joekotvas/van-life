@@ -9,7 +9,7 @@ export default function VanDetailView() {
 
   const { id } = useParams();
 
-  const { vans, loading, error } = useVans({
+  const { vans, status } = useVans({
     vanData: location.state?.vans,
   });
 
@@ -20,7 +20,7 @@ export default function VanDetailView() {
   const title = van?.name ? `${van.name} | #VANLIFE` : "#VANLIFE";
   useTitle(title);
 
-  if (loading) {
+  if (status.loading) {
     return (
       <main className="page loading-page">
         <div className="row">
@@ -30,7 +30,7 @@ export default function VanDetailView() {
     );
   }
 
-  if (error) {
+  if (status.error) {
     return (
       <main className="page error-page">
         <div className="row">

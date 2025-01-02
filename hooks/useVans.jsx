@@ -3,12 +3,15 @@ import { getVans, getHostVans } from "../api";
 
 export default function useVans({ vanData = [], hostId = null }) {
   const [vans, setVans] = React.useState(vanData);
-  const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState(null);
+  const [status, setStatus] = React.useState({
+    ok: false,
+    loading: false,
+    error: null,
+  });
 
   React.useEffect(() => {
     async function loadVans(hostId) {
-      setLoading(true);
+      setStatus((prevStatus) => ({ ...prevStatus, loading: true }));
       try {
         if (hostId) {
           const data = await getHostVans(hostId);
@@ -17,10 +20,9 @@ export default function useVans({ vanData = [], hostId = null }) {
           const data = await getVans();
           setVans(data);
         }
+        setStatus({ loading: false, ok: true });
       } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
+        setStatus({ loading: false, error });
       }
     }
 
@@ -29,5 +31,5 @@ export default function useVans({ vanData = [], hostId = null }) {
     }
   }, []);
 
-  return { vans, loading, error };
+  return { vans, status };
 }

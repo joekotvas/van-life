@@ -7,11 +7,11 @@ import { getHostVans } from "../../api.js";
 import "../../styles/HostVans.css";
 
 export default function HostVans() {
-  const { loading, error, vans } = useVans({
+  const { vans, status } = useVans({
     hostId: 123,
   });
 
-  if (loading) {
+  if (status.loading) {
     return (
       <section className="host-vans-section">
         <h1>Loading your vans...</h1>
@@ -19,7 +19,7 @@ export default function HostVans() {
     );
   }
 
-  if (error) {
+  if (status.error) {
     return (
       <section className="host-vans-section">
         <h1>Failed to load your vans...</h1>
