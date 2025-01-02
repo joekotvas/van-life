@@ -7,6 +7,12 @@ import "../../styles/VanDetail.css";
 export default function VanDetailView({ vans, vanId }) {
   const location = useLocation();
 
+  console.log(location);
+
+  const type = location.state?.type || "all";
+
+  console.log(location.state, type);
+
   const van = vans[vanId];
 
   useTitle(`${van.name} | #VANLIFE`);
@@ -16,11 +22,11 @@ export default function VanDetailView({ vans, vanId }) {
       <section className="van-detail-section">
         <div className="row">
           <Link
-            to={location.state ? `..?${location.state.search}` : ".."}
+            to={location.state?.search ? `..${location.state.search}` : ".."}
             relative="path"
             className="van-detail-back-link"
           >
-            Back to all Vans
+            Back to {type} Vans
           </Link>
 
           {van ? (
