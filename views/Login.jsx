@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { loginUser } from "../api";
 
@@ -17,6 +17,8 @@ export default function Login() {
   });
 
   const location = useLocation();
+  const navigate = useNavigate();
+
   const { message } = location.state || { message: "" };
 
   async function checkUser(loginFormData) {
@@ -24,6 +26,9 @@ export default function Login() {
     try {
       const res = await loginUser(loginFormData);
       console.log(res);
+      navigate(location.state?.from || "/host", {
+        replace: true,
+      });
     } catch (err) {
       setStatus((prev) => ({ ...prev, error: err }));
     } finally {

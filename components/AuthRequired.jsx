@@ -1,8 +1,9 @@
 import React from "react";
-import { Outlet, Navigate } from "react-router-dom";
+import { Outlet, Navigate, useLocation } from "react-router-dom";
 
 export default function AuthRequired() {
   const authenticated = true;
+  const location = useLocation();
 
   if (!authenticated) {
     return (
@@ -10,7 +11,9 @@ export default function AuthRequired() {
         to="/login"
         state={{
           message: "Please log in to manage your account.",
+          from: location.pathname,
         }}
+        replace
       />
     );
   }
