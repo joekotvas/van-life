@@ -21,6 +21,7 @@ export default function VansCatalog({ vans }) {
   const linkState = {
     search: `?${searchParams.toString()}`,
     type: searchParams.get("type"),
+    vans: vans,
   };
 
   return (

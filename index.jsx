@@ -11,6 +11,7 @@ import About from "./views/About";
 import Login from "./views/Login";
 
 import Vans from "./views/Vans/Vans";
+import VanDetail from "./views/Vans/VanDetail";
 
 // import Host from './views/Host/Host'
 import HostLayout from "./views/Host/Host";
@@ -37,7 +38,7 @@ function App() {
 
           <Route path="vans">
             <Route index element={<Vans />} />
-            <Route path=":id" element={<Vans />} />
+            <Route path=":id" element={<VanDetail />} />
           </Route>
 
           <Route element={<AuthRequired />}>

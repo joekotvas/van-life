@@ -6,7 +6,7 @@ import "../styles/NotFound.css";
 export default function NotFound() {
   return (
     <main className="notfound-page">
-      <div class="row">
+      <div className="row">
         <section>
           <h1>Sorry, the page you were looking for was not found.</h1>
           <Link to="/" className="button secondary-button">

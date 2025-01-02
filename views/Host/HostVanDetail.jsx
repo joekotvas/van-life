@@ -1,5 +1,7 @@
-import React from 'react'
+import React from "react";
+
+import VanDetail from "../Vans/VanDetail";
 
 export default function HostVanDetail() {
-  return <h1>Host van detail here. 🚐</h1>
+  return <VanDetail />;
 }

@@ -1,167 +1,173 @@
 .vans-page {
-    flex: 1;
+  flex: 1;
 }
 
 .vans-filters {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 1rem;
-    height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  height: 4rem;
 }
 
 .van-clear-filters {
-    margin-left: auto;
-    margin-top: .5rem;
-    padding: 0.35rem 0 .35rem;
-    text-decoration: underline;
+  margin-left: auto;
+  margin-top: 0.5rem;
+  padding: 0.35rem 0 0.35rem;
+  text-decoration: underline;
 }
 
 .vans-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
-    gap: 1.5rem;
-    padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
 }
 
 .van-image {
-    height: auto;
-    min-height: 14.5rem;
-    width: 100%;
-    object-fit: cover;
+  height: auto;
+  min-height: 14.5rem;
+  width: 100%;
+  object-fit: cover;
 }
 
 .van-title {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 600;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .van-title a {
-    color: #161616;
-    text-decoration: none;
+  color: #161616;
+  text-decoration: none;
 }
 
 .van-price-container {
-    float: right;
+  float: right;
 }
 
 .van-price-amount {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 600;
-    display: block;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: block;
 }
 
 .van-price-per-day {
-    margin-top: -.25rem;
-    display: block;
+  margin-top: -0.25rem;
+  display: block;
 
-    text-align: right;
-    font-size: 0.875rem;
-    font-weight: 500;
+  text-align: right;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .van-tag {
-    margin-top: .5rem;
-    padding: 0.35rem .8rem;
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.8rem;
 
-    display: inline-block;
+  display: inline-block;
 
-    color: #FFEAD0;
-    background: #E17654;
-    border-radius: .31rem;
+  color: #ffead0;
+  background: #e17654;
+  border-radius: 0.31rem;
 }
 
 .vans-filters .van-tag-filter {
-    color: #4D4D4D;
-    background: #FFEAD0;
-    text-decoration: none;
-    font-weight: normal;
-    border: none;
-    cursor: pointer;
+  color: #4d4d4d;
+  background: #ffead0;
+  text-decoration: none;
+  font-weight: normal;
+  border: none;
+  cursor: pointer;
 }
 
-.van-tag--simple, .van-tag--simple:hover, .van-tag--simple.selected {
-    background: #E17654;
+.van-tag--simple,
+.van-tag--simple:hover,
+.van-tag--simple.selected {
+  background: #e17654;
 }
 
-.van-tag--rugged, .van-tag--rugged:hover, .van-tag--rugged.selected {
-    background: #115E59;
+.van-tag--rugged,
+.van-tag--rugged:hover,
+.van-tag--rugged.selected {
+  background: #115e59;
 }
 
-.van-tag--luxury, .van-tag--luxury:hover, .van-tag--luxury.selected {
-    background: #161616;
+.van-tag--luxury,
+.van-tag--luxury:hover,
+.van-tag--luxury.selected {
+  background: #161616;
 }
 
-.vans-filters :hover, .vans-filters .selected {
-    color: #FFEAD0;
+.vans-filters :hover,
+.vans-filters .selected {
+  color: #ffead0;
 }
 
-.van-clear-filters a, .van-clear-filters a:hover {
-    color: #4D4D4D;
-    text-decoration: underline;
+.van-clear-filters a,
+.van-clear-filters a:hover {
+  color: #4d4d4d;
+  text-decoration: underline;
 }
 
 .van-detail-page {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 
-    color: #161616;
+  color: #161616;
 
-    &.not-found {
-        text-align: center;
-    }
+  &.not-found {
+    text-align: center;
+  }
 
-    .van-detail-back-link {
-        margin-bottom: 2.5rem;
-        display: inline-block;
+  .van-detail-back-link {
+    margin-bottom: 2.5rem;
+    display: inline-block;
 
-        color: #201F1D;
-    }
+    color: #201f1d;
+  }
 
-    .van-detail-back-link:before {
-        content: " ";
-        background: url('/images/back-arrow.svg') no-repeat center center;
-        margin: 0 .5rem .125rem 0;
-        display: inline-block;
-        width: .75rem;
-        height: .5rem;
-        color: #858585;
-    }
+  .van-detail-back-link:before {
+    content: " ";
+    background: url("/images/back-arrow.svg") no-repeat center center;
+    margin: 0 0.5rem 0.125rem 0;
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.5rem;
+    color: #858585;
+  }
 
-    & .van-detail-image {
-        width: 100%;
-        height: auto;
-        max-height: 22rem;
-        object-fit: cover;
-    }
+  & .van-detail-image {
+    width: 100%;
+    height: 22rem;
+    object-fit: cover;
+  }
 
-    & .van-tag {
-        display: inline-block;
-        margin-top: 2.5rem;
-    }
+  & .van-tag {
+    display: inline-block;
+    margin-top: 2.5rem;
+  }
 
-    & .van-detail-title {
-        margin-bottom: .6rem;
-    }
+  & .van-detail-title {
+    margin-bottom: 0.6rem;
+  }
 
-    & .van-detail-price-amount {
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
+  & .van-detail-price-amount {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
 
-    & .van-detail-price-per-day {
-        font-size: 1.25rem;
-        font-weight: 500;
-    }
+  & .van-detail-price-per-day {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
 
-
-    & .van-detail-cta-button {
-        width: 100%;
-        margin-top: .6rem;
-    }
+  & .van-detail-cta-button {
+    width: 100%;
+    margin-top: 0.6rem;
+  }
 }

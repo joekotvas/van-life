@@ -15,7 +15,7 @@ export default function AboutView() {
         src={StarryNightImg}
         alt="Relaxing on the roof of a travel van beneath a starry sky."
       />
-      <div class="row">
+      <div className="row">
         <section className="about-intro-section">
           <h1 className="about-intro-title">
             Don’t squeeze in a sedan when you could relax in a van.
