@@ -26,4 +26,10 @@
 .login-form button[type="submit"] {
   margin-top: 1.375rem;
   padding: 1rem;
+  cursor: pointer;
+}
+
+.login-form button[type="submit"]:disabled {
+  background: #4d4d4d;
+  cursor: not-allowed;
 }

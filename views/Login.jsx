@@ -25,7 +25,9 @@ export default function Login() {
       const res = await loginUser(loginFormData);
       console.log(res);
     } catch (err) {
-      setStatus({ loading: false, error: err });
+      setStatus((prev) => ({ ...prev, error: err }));
+    } finally {
+      setStatus((prev) => ({ ...prev, loading: false }));
     }
   }
 
@@ -75,8 +77,12 @@ export default function Login() {
               />
             </label>
           </div>
-          <button type="submit" className="button primary-button">
-            Sign in
+          <button
+            type="submit"
+            className="button primary-button"
+            disabled={status.loading}
+          >
+            {status.loading ? "Signing in..." : "Sign in"}
           </button>
         </form>
       </div>
