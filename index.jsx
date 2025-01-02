@@ -7,6 +7,7 @@ import Layout from "./components/Layout";
 
 import Home from "./views/Home";
 import About from "./views/About";
+import Login from "./views/Login";
 
 import Vans from "./views/Vans/Vans";
 
@@ -30,6 +31,8 @@ function App() {
           <Route path="/" element={<Home />} />
 
           <Route path="about" element={<About />} />
+
+          <Route path="login" element={<Login />} />
 
           <Route path="vans">
             <Route index element={<Vans />} />

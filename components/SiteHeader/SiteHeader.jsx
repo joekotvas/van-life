@@ -1,6 +1,9 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import '../../styles/SiteHeader.css'
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+
+import AvatarIcon from "../../images/avatar-icon.svg";
+
+import "../../styles/SiteHeader.css";
 
 export default function SiteHeader() {
   return (
@@ -19,6 +22,9 @@ export default function SiteHeader() {
       <NavLink to="/vans" className="site-nav-link">
         Vans
       </NavLink>
+      <NavLink to="/login" className="site-nav-link">
+        <img src={AvatarIcon} alt="Log In" />
+      </NavLink>
     </nav>
-  )
+  );
 }
