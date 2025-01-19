@@ -17,7 +17,7 @@ export default function Dashboard() {
             <Link
               to="/host/income"
               title="View income details"
-              className="income-filter-link"
+              className="filter-link"
             >
               30 days
             </Link>

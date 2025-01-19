@@ -73,7 +73,47 @@
   align-items: center;
 }
 
-.income-filter-link {
+.filter-link {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.host-reviews-section {
+  padding: 0 2rem;
+}
+
+.host-reviews-section header {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  align-items: center;
+}
+
+.host-reviews-section img {
+  max-width: 512px;
+}
+
+.reviews-list {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.review {
+  border-bottom: 1px solid #c7c7c7;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.review-meta {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.review-name {
+  font-weight: 600;
+}
+
+.review-date {
+  color: #8c8c8c;
 }
