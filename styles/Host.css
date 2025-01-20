@@ -165,3 +165,47 @@
   color: #4d4d4d;
   font-size: 1.25rem;
 }
+
+.host-van-detail {
+  background: white;
+}
+
+.host-van-detail-top-row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.host-van-detail-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.3125rem;
+}
+
+.host-van-detail-top-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: start;
+  justify-content: flex-start;
+}
+
+.host-van-detail .van-tag {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.host-van-detail .van-detail-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.host-van-detail .van-detail-price-amount {
+  font-size: 1.25rem;
+}
+
+.host-van-detail .van-detail-price-per-day {
+  font-size: 1rem;
+}

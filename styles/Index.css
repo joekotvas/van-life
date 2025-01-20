@@ -96,3 +96,28 @@ a:hover {
   text-align: center;
   color: #f00000;
 }
+
+.host-van-detail-tabs {
+  padding: 1rem 2rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+.host-van-detail-tabs-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.host-van-photos img {
+  width: 6.75rem;
+  height: 6.75rem;
+}
+
+.van-detail-price-tab-container .van-detail-price-amount {
+  font-size: 1.5rem;
+}
+
+.van-detail-price-tab-container .van-detail-price-per-day {
+  font-size: 1.25rem;
+}
