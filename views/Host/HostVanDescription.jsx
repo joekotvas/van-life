@@ -18,7 +18,8 @@ export default function HostVanDescription() {
           {van.description}
         </p>
         <p>
-          <strong>Visibility: Public</strong>
+          <strong>Visibility: </strong>
+          Public
         </p>
       </div>
     )
