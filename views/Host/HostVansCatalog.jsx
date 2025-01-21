@@ -32,12 +32,12 @@ export default function HostVans() {
 
   const vansElements = vans.map(({ id, name, imageUrl, price }) => (
     <li className="host-vans-list-card" key={id}>
-      <Link to={`./vans/${id}`} state={{ type: "your", vans: vans }}>
+      <Link to={`/host/vans/${id}`} state={{ type: "your", vans: vans }}>
         <img className="host-vans-list-card--image" src={imageUrl} alt={name} />
       </Link>
       <div className="host-vans-list-card--info">
         <h2 className="host-vans-list-card--title">
-          <Link to={`./vans/${id}`} state={{ type: "your", vans: vans }}>
+          <Link to={`/host/vans/${id}`} state={{ type: "your", vans: vans }}>
             {name}
           </Link>
         </h2>
